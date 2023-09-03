@@ -2,15 +2,15 @@
 Feito com JAKARTA EE 9
 End points abaixo
 
-GET para listar todos os produtos;
+GET para listar todos os produtos:</br>
   http://localhost:8080/samplerestful/api/produtos
   
 -------------------------------------------------------------------
-GET para listar todos um produto por id;
+GET para listar todos um produto por id:
   http://localhost:8080/samplerestful/api/produtos/1
 
 -------------------------------------------------------------------
-POST para salvar um produto;
+POST para salvar um produto:
   http://localhost:8080/samplerestful/api/produtos/1
 
   json de exemplo: 
