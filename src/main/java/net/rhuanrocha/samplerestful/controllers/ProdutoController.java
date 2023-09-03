@@ -22,9 +22,6 @@ import java.net.URI;
 @Path("/produtos")
 public class ProdutoController {
 
-	/*@Context
-	UriInfo uriInfo;*/
-
 	@Inject
 	private ProdutoService produtoService;
 
