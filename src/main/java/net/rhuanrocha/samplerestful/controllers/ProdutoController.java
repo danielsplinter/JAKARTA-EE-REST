@@ -5,6 +5,7 @@ import jakarta.validation.Valid;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
@@ -18,6 +19,8 @@ import net.rhuanrocha.samplerestful.entity.Produto;
 import net.rhuanrocha.samplerestful.services.ProdutoService;
 
 import java.net.URI;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 @Path("/produtos")
 public class ProdutoController {
@@ -46,6 +49,18 @@ public class ProdutoController {
 		).entity(produto).build();
 	}
 
+	@PUT
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response update(@Valid ProdutoDTO produtoDto, @PathParam("id") Long id){
+		Produto produtoAtualizar = produtoService.findById(id);
+
+		produtoAtualizar = preencheProdutoAtulizar(produtoAtualizar, produtoDto);
+
+		Produto produto = produtoService.save(produtoAtualizar);
+
+		return Response.status(Response.Status.OK).entity(produto).build();
+	}
+
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -59,5 +74,13 @@ public class ProdutoController {
 	public Response deleteById(@PathParam("id") Long id){
 		produtoService.deleteById(id);
 		return Response.noContent().build();
+	}
+
+	private Produto preencheProdutoAtulizar(Produto produtoAtualizar, ProdutoDTO produtoDto){
+		produtoAtualizar.setValor(produtoDto.getValor());
+		produtoAtualizar.setDescricao(produtoDto.getDescricao());
+		produtoAtualizar.setUltimaAtualizacao(LocalDateTime.now(ZoneId.of("UTC")));
+
+		return produtoAtualizar;
 	}
 }

@@ -33,9 +33,15 @@ public class ProdutoServiceImpl implements ProdutoService {
 
     @Override
     public Produto save(Produto produto) {
-        produto.setDataCadastro(LocalDateTime.now(ZoneId.of("UTC")));
         produto.setUltimaAtualizacao(LocalDateTime.now(ZoneId.of("UTC")));
-        produtoRepository.save(produto);
+
+        if(produto.getId() == null){
+            produto.setDataCadastro(LocalDateTime.now(ZoneId.of("UTC")));
+            produtoRepository.save(produto);
+            return produto;
+        }
+
+        produtoRepository.update(produto);
 
         return produto;
     }

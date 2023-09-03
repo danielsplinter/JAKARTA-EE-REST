@@ -28,6 +28,11 @@ public class ProdutoRepositoryImpl implements ProdutoRepository {
         return produto;
     }
 
+    public Produto update(Produto produto) {
+        entityManager.merge(produto);
+        return produto;
+    }
+
     public void delete(Produto produto) {
         entityManager.remove(produto);
     }

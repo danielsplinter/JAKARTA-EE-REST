@@ -10,4 +10,5 @@ public interface ProdutoRepository {
     List<Produto> findAll();
     Produto save(Produto produto);
     void delete(Produto produto);
+    Produto update(Produto produto);
 }
