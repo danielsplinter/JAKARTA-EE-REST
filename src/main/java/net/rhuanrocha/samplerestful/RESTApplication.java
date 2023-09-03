@@ -1,4 +1,4 @@
-package net.rhuanrocha.samplerestful;
+package net.rhuanrocha.samplejakartaenterprisebean;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
