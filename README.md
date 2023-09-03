@@ -6,7 +6,7 @@ GET para listar todos os produtos:</br>
 http://localhost:8080/samplerestful/api/produtos
   
 -------------------------------------------------------------------
-GET para listar todos um produto por id:</br>
+GET para listar um produto por id:</br>
 http://localhost:8080/samplerestful/api/produtos/1
 
 -------------------------------------------------------------------
