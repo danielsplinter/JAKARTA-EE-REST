@@ -50,6 +50,7 @@ public class ProdutoController {
 	}
 
 	@PUT
+	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response update(@Valid ProdutoDTO produtoDto, @PathParam("id") Long id){
 		Produto produtoAtualizar = produtoService.findById(id);
