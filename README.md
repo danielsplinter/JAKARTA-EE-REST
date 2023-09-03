@@ -1,6 +1,6 @@
 # JAKARTA-EE-REST
-Feito com JAKARTA EE 9
-End points abaixo
+Feito com JAKARTA EE 9</br>
+End points abaixo</br>
 
 GET para listar todos os produtos:</br>
 http://localhost:8080/samplerestful/api/produtos
