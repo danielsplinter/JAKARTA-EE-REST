@@ -31,11 +31,6 @@ public class ProdutoController {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response findAll() {
-		/*Link link = Link.fromUriBuilder(uriInfo.getBaseUriBuilder()
-						.path(ProdutoController.class)
-						.path(Long.toString(produto.getId())))
-				.rel("self")
-				.build();*/
 		return Response.ok(produtoService.findAll()).build();
 	}
 
