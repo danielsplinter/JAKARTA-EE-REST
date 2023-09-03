@@ -11,13 +11,13 @@ http://localhost:8080/samplerestful/api/produtos/1
 
 -------------------------------------------------------------------
 POST para salvar um produto:</br>
-http://localhost:8080/samplerestful/api/produtos/1
+http://localhost:8080/samplerestful/api/produtos/1</br>
 
   json de exemplo:</br>
-    {</br>
-      "descricao": "computador",</br>
-      "valor": 2000</br>
-    }</br>
+    {
+      "descricao": "computador",
+      "valor": 2000
+    }
 
 -------------------------------------------------------------------
 DELETE para deletar um produto por id:</br>
