@@ -75,7 +75,6 @@ public class ProdutoController {
 	private Produto preencheProdutoAtulizar(Produto produtoAtualizar, ProdutoDTO produtoDto){
 		produtoAtualizar.setValor(produtoDto.getValor());
 		produtoAtualizar.setDescricao(produtoDto.getDescricao());
-		produtoAtualizar.setUltimaAtualizacao(LocalDateTime.now(ZoneId.of("UTC")));
 
 		return produtoAtualizar;
 	}
