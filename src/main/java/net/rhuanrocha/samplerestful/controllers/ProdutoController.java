@@ -9,18 +9,13 @@ import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.core.Context;
-import jakarta.ws.rs.core.Link;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import jakarta.ws.rs.core.UriInfo;
 import net.rhuanrocha.samplerestful.dto.ProdutoDTO;
 import net.rhuanrocha.samplerestful.entity.Produto;
 import net.rhuanrocha.samplerestful.services.ProdutoService;
 
 import java.net.URI;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 
 @Path("/produtos")
 public class ProdutoController {
