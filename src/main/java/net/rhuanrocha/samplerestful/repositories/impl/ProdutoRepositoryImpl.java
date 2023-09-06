@@ -1,6 +1,7 @@
 package net.rhuanrocha.samplerestful.repositories.impl;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.EntityManager;
 import net.rhuanrocha.samplerestful.entity.Produto;
@@ -10,6 +11,7 @@ import net.rhuanrocha.samplerestful.services.exceptions.ProductNotFoundException
 import java.util.List;
 import java.util.Optional;
 
+@RequestScoped
 public class ProdutoRepositoryImpl implements ProdutoRepository {
 
     @PersistenceContext

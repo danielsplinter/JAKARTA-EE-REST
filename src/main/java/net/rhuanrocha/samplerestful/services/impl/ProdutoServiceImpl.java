@@ -2,9 +2,6 @@ package net.rhuanrocha.samplerestful.services.impl;
 
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.core.Response;
 import net.rhuanrocha.samplerestful.entity.Produto;
 import net.rhuanrocha.samplerestful.repositories.ProdutoRepository;
 import net.rhuanrocha.samplerestful.services.ProdutoService;

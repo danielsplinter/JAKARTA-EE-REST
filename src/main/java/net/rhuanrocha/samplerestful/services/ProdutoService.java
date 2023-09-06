@@ -1,7 +1,5 @@
 package net.rhuanrocha.samplerestful.services;
-
 import net.rhuanrocha.samplerestful.entity.Produto;
-
 import java.util.List;
 
 public interface ProdutoService {
